@@ -9,8 +9,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-        user: '',
-        pass: '',
+        user: 'gauthamnambiar172008india@gmail.com',
+        pass: 'worviienkyptgquk',
     },
     secure: true,
 });
@@ -18,11 +18,11 @@ const transporter = nodemailer.createTransport({
 app.post("/send-mail", (req, res) => {
     const to = req.body.to;
     const mailData = {
-        from: "",
+        from: "gauthamnambiar172008india@gmail.com",
         to: to,
         subject: "Your payment is due!",
         html: ` <p>
-                    Hello ${name},
+                    Hello ${to},
                 </p>
                 <p>
                     This is a reminder email that your payment of amount - ${amount} is due on date - ${date}
